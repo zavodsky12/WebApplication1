@@ -1,0 +1,66 @@
+﻿.hlavnyObrazok {
+    width: 80%;
+    height: auto;
+}
+
+.vedlajsiObrazok {
+    width: 80%;
+    height: auto;
+    /*padding: 100px;*/
+}
+
+.stred {
+    text-align: center;
+}
+
+.nav {
+    display: block;
+}
+
+html, body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+    background-color: #004F9B;
+    color: white;
+}
+
+td {
+    /*background-color: #97EE93;*/
+}
+
+.biele {
+    color: white;
+}
+
+.registr {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

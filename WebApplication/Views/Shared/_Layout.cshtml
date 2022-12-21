@@ -1,0 +1,64 @@
+﻿@{ 
+
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="~/css/site.css" />-->
+    <title>@ViewData["Title"] - News portal</title>
+    <link rel="stylesheet" href="~/css/w3-styly.css">
+    <link rel="stylesheet" href="~/css/w3-theme.css">
+    <link rel="stylesheet" href="~/css/mojeStyly.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a class="w3-bar-item w3-button w3-theme-l1" asp-area="" asp-controller="Home" asp-action="Index">Main page</a>
+            <a class="w3-bar-item w3-button w3-hide-small w3-hover-white" asp-area="" asp-controller="Home" asp-action="About">About</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left w3-padding-32" id="mySidebar">
+        <!--    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">-->
+        <!--        <i class="fa fa-remove"></i>-->
+        <!--    </a>-->
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" asp-area="" asp-controller="News" asp-action="Index">News</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Standings</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Matches</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Clubs</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Section tournament</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">State tournament</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#">Players</a>
+    </nav>
+
+    @RenderBody()
+
+    <div class="w3-aside">
+        <div class="w3-row w3-padding-64">
+            <div class="w3-container stred">
+                <a href="https://www.w3schools.com/" target="_blank"><img src="/files/qVr_MxvA_400x400.png" alt="Reklama" class="vedlajsiObrazok"></a>
+            </div>
+        </div>
+    </div>
+    <footer id="myFooter" class="w3-footer">
+        <div class="w3-footer-container w3-theme-l2">
+            <h4>Footer</h4>
+        </div>
+
+        <div class="w3-footer-container w3-theme-l1">
+            <p>Powered by w3.css</p>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

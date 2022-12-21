@@ -1,0 +1,25 @@
+﻿@model IEnumerable<NewsModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<!--<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>-->
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-container">
+            <h1 class="w3-text-teal">Latest news</h1>
+            @foreach (var item in Model) 
+            {
+                <img src="/files/@Html.DisplayFor(modelItem => item.image)" alt="item.image" width="151px" height="151px" style="float:left;padding: 5px;">
+                <h3><a href="Article/@Html.DisplayFor(modelItem => item.id)">@Html.DisplayFor(modelItem => item.heading)</a></h3>
+                <p>@Html.DisplayFor(modelItem => item.firstText)</p>
+                <div style="clear:both;"></div>
+                <hr>
+            }
+        </div>
+    </div>
+    <!-- END MAIN -->
+</div>

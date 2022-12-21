@@ -1,0 +1,33 @@
+﻿@model NewsModel
+
+@{
+    ViewData["Title"] = "Article";
+}
+
+@*using Microsoft.AspNetCore.Http.Features*@
+
+@*{//var path = Context.Request.HttpContext.Features.Get<IHttpRequestFeature>().RawTarget.ToString();}*@
+
+@*{
+    /*var routeUrl = Url.RouteUrl(ViewContext.RouteData.Values);
+    //var routeUrl = ViewContext.RouteData.Values["Action"].ToString();
+    var qsPath = ViewContext.HttpContext.Request.QueryString.Value;
+    var returnUrl = $"{routeUrl}{qsPath}";
+
+    string[] tokens = qsPath.Split('=');
+    string[] resTokens = tokens[1].Split('/');*/
+}*@
+
+<div class="w3-main">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-container">
+            <h1 class="w3-text-teal">@Model.heading</h1>
+            @foreach (var item in Model.paragraphs)
+            {
+                <p>@item.paragraph</p>
+            }
+        </div>
+    </div>
+
+    <!-- END MAIN -->
+</div>
